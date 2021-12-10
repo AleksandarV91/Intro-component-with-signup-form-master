@@ -1,0 +1,262 @@
+/* Universal Styles */
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* --- Mobile Flow --- */
+
+body{
+    background: url("../images/bg-intro-mobile.png") no-repeat top, var(--red);
+    background-size: cover;
+}
+
+/* Header */
+
+header{
+    margin: 88px 24px 35px 24px;
+    text-align: center;
+    color: white;
+}
+
+h1{
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -0.29px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+p{
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0px;
+    margin-bottom: 45px;
+    font-weight: 500;
+}
+
+/* Main */
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+
+.try{
+    width: 327px;
+    height: 88px;
+    background-color: var(--blue);
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    margin: 15px 24px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.27px;
+    padding: 18px 66.5px;
+    border-bottom: 7px solid hsl(0, 47%, 56%);
+}
+
+.bold{
+    font-weight: 600;
+}
+
+/* Form Content */
+
+.form-content{
+    margin: 15px 24px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 0;
+    text-align: center;
+    border-bottom: 7px solid hsl(0, 47%, 56%);
+}
+
+input{
+    width: 279px;
+    height: 56px;
+    border-radius: 5px;
+    border: 1px solid var(--grayish-blue);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0.25px;
+    padding: 15px;
+    color: var(--dark-blue);
+    display: block;
+}
+
+input:focus{
+    border: 1px solid var(--blue);
+    outline: none;
+}
+
+.form-input{
+    position: relative;
+    margin-bottom: 30px;
+}
+.form-input small{
+    color: hsl(0, 100%, 74%);
+    font-weight: 600;
+    position: absolute;
+    bottom: -24px;
+    right: 0;
+    opacity: 0;
+    text-align: right;
+}
+
+.form-input.error input{
+    color: hsl(0, 100%, 74%);
+    border-color:hsl(0, 100%, 74%);
+}
+.form-input.error input::placeholder{
+    color: hsl(0, 100%, 74%);
+}
+.form-input img{
+    opacity: 0;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.form-input.error img{
+    opacity: 1;
+}
+
+.form-input small{
+    opacity: 0;
+}
+
+.form-input.error small{
+    opacity: 1;
+}
+
+.submit{
+    width: 279px;
+    height: 56px;
+    background-color: var(--green);
+    color: white;
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 26px;
+    font-weight: 600;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+    border-bottom: 4px solid hsl(154, 57%, 39%);
+    margin-bottom: 15px;
+}
+
+.form-text{
+    font-size: 11px;
+    line-height: 21px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    color: var(--grayish-blue);
+    padding: 0 25px;
+}
+
+.accent{
+    color: var(--red);
+    font-weight: 700;
+}
+
+/* Footer */
+
+footer{
+    margin-top: 25px;
+}
+
+
+/* --- Desktop Flow --- */
+
+@media screen and (min-width:1024px) {
+
+    body{
+        background: url("../images/bg-intro-desktop.png") no-repeat center, var(--red);
+        background-size: cover;
+    }
+    
+    /* Container */
+
+    .container{
+        display: flex;
+
+    }
+
+    /* Header */
+
+    header{
+        margin: 260px 50px 150px 165px;
+        text-align: left;
+    }
+
+    header h1{
+        font-size: 50px;
+        line-height: 55px;
+        letter-spacing: -0.52px;
+        padding-right: 100px;
+        margin-bottom: 35px;
+    }
+
+    header p{
+        padding-right: 50px;
+    }
+
+    /* Main */
+
+    main{
+        margin-top: 75px;
+        margin-right: 165px;
+        margin-bottom: 0;
+    }
+
+    .try{
+        width: 540px;
+        height: 60px;
+    }
+
+    /* Form Content */
+
+    .form-content{
+        padding: 40px 30px 10px 30px;
+    }
+
+    input{
+        width: 460px;
+        height: 56px;
+    }
+
+    .submit{
+        width: 460px;
+        height: 56px;
+    }
+
+    .submit:hover{
+        background-color: #77E2B3;
+        border-bottom: 4px solid #6bcfa4;
+        cursor: pointer;      
+    }
+}
+
